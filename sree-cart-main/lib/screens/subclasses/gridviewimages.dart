@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sreekart/screens/screen1.dart';
 
 import '../homescreens/buyscreen.dart';
+import 'Text.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -46,7 +47,7 @@ class Grid extends StatelessWidget {
                       text(texts: "Tommato",color: Colors.black,),
                       text(texts: "₹ 250",color: Colors.black,),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

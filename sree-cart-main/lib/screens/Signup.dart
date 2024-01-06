@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-import 'Signup.dart';
-import 'screen2.dart';
+import 'package:sreekart/screens/loginpage.dart';
+
 import 'subclasses/Text.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: LoginPage(),
-  ));
-}
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,18 +18,34 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               text(
-                texts: "Login",
+                texts: "SignUp",
                 fontsize: 30,
               ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               Image(height: 150, image: AssetImage("lib/assetimages/kudumbasree-logo-019B5D2B6C-seeklogo.com.png")),
               SizedBox(
-                height: 25,
+                height: 20,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    focusColor: Colors.black,
+                    hintStyle: TextStyle(color: Color(0xff414141)),
+                    labelText: "Name",
+                    border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black), borderRadius: BorderRadius.circular(6)),
+                    // icon: Icon(Icons.email_rounded),
+                    hintText: "Name"),
+              ),
+              SizedBox(
+                height: 20,
               ),
               TextFormField(
                 decoration: InputDecoration(
@@ -47,10 +57,11 @@ class LoginPage extends StatelessWidget {
                     hintStyle: TextStyle(color: Color(0xff414141)),
                     labelText: "E-mail",
                     border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black), borderRadius: BorderRadius.circular(6)),
+                    // icon: Icon(Icons.email_rounded),
                     hintText: "E-mail"),
               ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               TextFormField(
                 decoration: InputDecoration(
@@ -64,14 +75,23 @@ class LoginPage extends StatelessWidget {
                     hintText: "password"),
               ),
               SizedBox(
-                height: 5,
+                height: 20,
               ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: text(
-                  texts: "Forgotpassword?",
-                  color: Color(0xff414141),
-                ),
+              TextFormField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    focusColor: Colors.black,
+                    hintStyle: TextStyle(color: Color(0xff414141)),
+                    labelText: "conformpassword",
+                    border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black), borderRadius: BorderRadius.circular(6)),
+                    // icon: Icon(Icons.email_rounded),
+                    hintText: "conformpassword"),
+              ),
+              SizedBox(
+                height: 20,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -79,11 +99,11 @@ class LoginPage extends StatelessWidget {
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => BottamAppbar(),
+                      builder: (context) => LoginPage(),
                     )),
                 child: Center(
                   child: text(
-                    texts: "SignIn",
+                    texts: "SignUp",
                     color: Colors.white,
                   ),
                 ),
@@ -94,17 +114,14 @@ class LoginPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("New User?"),
+                  Text("Already have an acoount?"),
                   TextButton(
-                      onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignUp(),
-                          )),
-                      child: text(
-                        texts: "SignUp",
-                        color: Colors.black,
-                      ))
+                    onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),)),
+                    child: text(
+                      texts: "Login",
+                      color: Colors.black,
+                    ),
+                  )
                 ],
               )
             ],

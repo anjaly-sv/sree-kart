@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sreekart/screens/screen1.dart';
+import '../subclasses/Text.dart';
 
 // void main() {
 //   runApp(MaterialApp(

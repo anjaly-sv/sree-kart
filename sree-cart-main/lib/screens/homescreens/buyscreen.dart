@@ -48,18 +48,18 @@ class BuyScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text("RS. 75", style: TextStyle(fontSize: 25)),
+                            Text("RS. 75", style: TextStyle(fontSize: 25,color: Colors.white)),
                             SizedBox(
                               width: 8,
                             ),
-                            Text("Only", style: TextStyle(fontSize: 20)),
+                            Text("Only", style: TextStyle(fontSize: 20,color: Colors.white)),
                           ],
                         ),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      Text("Discription", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 20)),
+                      Text("Discription", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 20)),
                       SizedBox(
                         height: 20,
                       ),
@@ -72,7 +72,7 @@ class BuyScreen extends StatelessWidget {
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-                              primary: Colors.green[800],
+                              primary: Color(0xffe9bf01),
                             ),
                             child: Center(child: Text("Remove", style: TextStyle(color: Colors.white))),
                           ),
@@ -85,7 +85,7 @@ class BuyScreen extends StatelessWidget {
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-                              primary: Colors.green[800],
+                              primary: Color(0xffe9bf01),
                             ),
                             child: Center(child: Text("Buy Now", style: TextStyle(color: Colors.white))),
                           ),

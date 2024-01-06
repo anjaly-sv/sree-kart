@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sreekart/screens/homescreens/homepage.dart';
-
+import 'Signup.dart';
+import 'loginpage.dart';
 import 'screen2.dart';
+import 'subclasses/Text.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -80,7 +81,7 @@ class Screens extends StatelessWidget {
                       onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BottamAppbar(),
+                            builder: (context) => LoginPage(),
                           )),
                       child: Center(
                           child: text(
@@ -98,7 +99,7 @@ class Screens extends StatelessWidget {
                       onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BottamAppbar(),
+                            builder: (context) => SignUp(),
                           )),
                       child: Center(
                           child: text(
@@ -117,31 +118,4 @@ class Screens extends StatelessWidget {
   }
 }
 
-class text extends StatelessWidget {
-  final String? texts;
-  final double? fontsize;
-  final Color? color;
-  final FontStyle? fontStyle;
-
-  const text({
-    super.key,
-    required this.texts,
-    this.fontsize,
-    this.color,
-    this.fontStyle,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      texts!,
-      style: TextStyle(
-          color: color,
-          fontSize: fontsize,
-          fontWeight: FontWeight.bold,
-          fontStyle: fontStyle,
-          height: 1),
-    );
-  }
-}
 
